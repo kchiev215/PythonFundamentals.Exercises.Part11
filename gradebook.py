@@ -73,8 +73,11 @@ class Classroom:
     def print_students(self):
         print(f'{self.students}')
 
+#
+# zipcoder = ZipCodeStudent("Fitru", "Fitru", "07/01/22")
+# classroom = Classroom()
+# classroom.add_student(zipcoder)
+# print(classroom.print_students())
+# zipcoder.update_first_name("Jeffy")
+# print(zipcoder.first_name)
 
-zipcoder = ZipCodeStudent("Fitru", "Fitru", "07/01/22")
-classroom = Classroom()
-classroom.add_student(zipcoder)
-print(classroom.print_students())
