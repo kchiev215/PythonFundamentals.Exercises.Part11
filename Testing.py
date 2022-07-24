@@ -137,6 +137,69 @@ class TestString(unittest.TestCase):
         expected = person1.dob
         self.assertEqual(expected, "09231993")
 
+    def test_add_instructor(self):
+        instructor1 = gradebook.Instructor("Lloyd", "Perez", "07012022")
+        expected = gradebook.Classroom().add_instructor(instructor1)
+        result = gradebook.Classroom().print_instructors()
+        self.assertEqual(expected, result)
+
+    def test_add_instructor1(self):
+        instructor1 = gradebook.Instructor("Tenae", "Tenae", "07012021")
+        expected = gradebook.Classroom().add_instructor(instructor1)
+        result = gradebook.Classroom().print_instructors()
+        self.assertEqual(expected, result)
+
+    def test_add_instructor3(self):
+        instructor1 = gradebook.Instructor("Nicholas", "Olas", "07012010")
+        expected = gradebook.Classroom().add_instructor(instructor1)
+        result = gradebook.Classroom().print_instructors()
+        self.assertEqual(expected, result)
+
+    def test_add_instructor4(self):
+        instructor1 = gradebook.Instructor("Kris", "Younger", "01111111")
+        expected = gradebook.Classroom().add_instructor(instructor1)
+        result = gradebook.Classroom().print_instructors()
+        self.assertEqual(expected, result)
+
+    def test_add_instructor5(self):
+        instructor1 = gradebook.Instructor("Thina", "Chiev", "07221993")
+        expected = gradebook.Classroom().add_instructor(instructor1)
+        result = gradebook.Classroom().print_instructors()
+        self.assertEqual(expected, result)
+
+    def test_add_student(self):
+        student = gradebook.Student("Nicholas", "Olas", "04031993")
+        expected = gradebook.Classroom().add_student(student)
+        result = gradebook.Classroom().print_students()
+        self.assertEqual(expected, result)
+
+    def test_add_student1(self):
+        student = gradebook.Student("Thina", "Chiev", "07221993")
+        expected = gradebook.Classroom().add_student(student)
+        result = gradebook.Classroom().print_students()
+        self.assertEqual(expected, result)
+
+    def test_add_student3(self):
+        student = gradebook.Student("Effy", "Jiffy", "01223333")
+        expected = gradebook.Classroom().add_student(student)
+        result = gradebook.Classroom().print_students()
+        self.assertEqual(expected, result)
+
+    def test_add_student4(self):
+        student = gradebook.Student("Luffy", "Liffy", "05662102")
+        expected = gradebook.Classroom().add_student(student)
+        result = gradebook.Classroom().print_students()
+        self.assertEqual(expected, result)
+
+    def test_add_student5(self):
+        student = gradebook.Student("Zorra", "Zirro", "06021985")
+        expected = gradebook.Classroom().add_student(student)
+        result = gradebook.Classroom().print_students()
+        self.assertEqual(expected, result)
+
+
+
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -54,24 +54,22 @@ class Classroom:
         self.students = []
         self.instructors = []
 
-    def add_instructor(self, instructor):
-        self.instructors.append(f'Student: {instructor.first_name} {instructor.last_name} {instructor.dob}, '
-                               f'{instructor.instructor_id}')
-        return self.instructors
+    def add_instructor(self, new_instructor):
+        self.instructors.append(f'Instructor: {new_instructor.first_name} {new_instructor.last_name} {new_instructor.dob}, '
+                                f'{new_instructor.instructor_id}')
 
-    def remove_instructor(self, instructor):
-        self.instructors.remove(instructor)
-        return self.instructors
+    def remove_instructor(self, new_instructor):
+        self.instructors.remove(new_instructor)
 
     def add_student(self, student):
         self.students.append(f'Student: {student.first_name} {student.last_name} {student.dob}, {student.student_id}')
-        return self.students
 
     def print_instructors(self):
         print(f'{self.instructors}')
 
     def print_students(self):
         print(f'{self.students}')
+
 
 #
 # zipcoder = ZipCodeStudent("Fitru", "Fitru", "07/01/22")
@@ -81,3 +79,12 @@ class Classroom:
 # zipcoder.update_first_name("Jeffy")
 # print(zipcoder.first_name)
 
+instructor = Instructor("Lloyd", "Perez", "07012022")
+instructor2 =Instructor("Tenae", "Tenae", "07012021")
+classroom = Classroom()
+classroom.add_instructor(instructor)
+classroom.add_instructor(instructor2)
+classroom.remove_instructor(instructor)
+classroom.print_instructors()
+# classroom.remove_instructor(instructor)
+# classroom.print_instructors()
